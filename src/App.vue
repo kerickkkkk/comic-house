@@ -1,4 +1,5 @@
 <template>
+  <!-- layout nav -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -19,6 +20,12 @@
     </div>
   </nav>
   <router-view/>
+  <!-- layout footer -->
+  <footer class="bg-light">
+    <div class="container">
+      footer
+    </div>
+  </footer>
 </template>
 
 <script>
