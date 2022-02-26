@@ -10,6 +10,21 @@
     transform: scale(1.2);
   }
 }
+.hoverBottom{
+  position: relative;
+  &:after{
+    content:'';
+    width: 0%;
+    display: block;
+    height: 2px;
+    // 暫時先用
+    background-color: #fff;
+    transition: width .3s;
+  }
+  &:hover::after{
+    width: 100%;
+  }
+}
 .vh-50{
   height: 50vh;
 }

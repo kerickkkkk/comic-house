@@ -38,7 +38,7 @@
               <button 
                 :class="{active : currentCategory === category}"
                 @click="this.currentCategory = category"
-                class="nav-link rounded-0" type="button" role="tab">
+                class="nav-link hoverBottom rounded-0" type="button" role="tab">
                 {{category}}
               </button>
             </li>
