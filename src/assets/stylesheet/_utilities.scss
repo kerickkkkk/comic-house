@@ -10,6 +10,9 @@
     transform: scale(1.2);
   }
 }
+.parallax{
+  background-attachment: fixed; /* 固定圖像 */
+}
 .hoverBottom{
   position: relative;
   &:after{

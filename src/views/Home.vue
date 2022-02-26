@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <!-- 橫幅廣告一些熱門的 -->
     <section class="banner container">
       <Swiper
         :slidesPerView="1"
@@ -27,9 +28,19 @@
         </SwiperSlide>
       </Swiper>
     </section>
-    <section class="vh-50 bg-light">
-      過度用
+    <!-- 推薦的區塊與介紹可以寫在這邊 -->
+    <section class="vh-50 bg-dark container-fluid">
+      <div class="row no-gutters h-100">
+        <div v-for="image in imagesOnlyFour" :key="image" class="col-3 bg-cover parallax h-100 d-flex justify-content-center align-items-center" 
+          :style="{backgroundImage:`linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ),url(${image.url})`}">
+          <div>
+            <h3>{{image.title}}</h3>
+            <p>{{image.content}}</p>
+          </div>
+        </div>
+      </div>
     </section>
+    <!-- 主要展示區 -->
     <main class="container py-5">
       <div class="row">
         <div class="col-8">
@@ -220,6 +231,9 @@ export default {
     },
     filterImage (){
       return this.images.filter(image => image.category === this.currentCategory)
+    },
+    imagesOnlyFour(){
+      return this.images.filter((image, i) => i < 4)
     }
   },
   mounted(){
