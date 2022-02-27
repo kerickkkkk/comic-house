@@ -14,19 +14,7 @@
       </Swiper>
     </section>
     <section class="Classification container py-5">
-      <h2 class="text-center mb-4">
-        <span class="border-bottom border-3 border-primary">漫畫分類</span>
-      </h2>
-      <Swiper
-        :slidesPerView="6"
-        :spaceBetween="50"
-        :navigation="true"
-        :pagination="{ clickable: true }"
-      >
-        <SwiperSlide v-for="(image,i) in images" :key="i">
-          <Card :data="image"></Card>
-        </SwiperSlide>
-      </Swiper>
+      <List :data="images" title="漫畫分類"></List>
     </section>
     <!-- 推薦的區塊與介紹可以寫在這邊 -->
     <section class="vh-50 bg-dark container-fluid">
@@ -83,12 +71,14 @@
 
 <script>
 // @ is an alias to /src
-import Card from '@/components/Card.vue';
+import Card from '@/components/Card.vue'
+import List from '@/components/List.vue'
 
 export default {
   name: 'Home',
   components:{
-    Card
+    Card,
+    List
   },
   data(){
     return{
