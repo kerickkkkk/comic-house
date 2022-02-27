@@ -10,10 +10,18 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <!-- active 控制當下頁面 -->
-            <router-link to="/" class="nav-link" :class="{active: $route.name === 'Home'}">Home</router-link> 
+            <router-link to="/" class="nav-link" :class="{active: $route.name === 'Home'}">首頁</router-link> 
           </li>
           <li class="nav-item">
-            <router-link to="/about" class="nav-link" :class="{active: $route.name === 'About'}">About</router-link>
+            <!-- active 控制當下頁面 -->
+            <router-link to="/book" class="nav-link" :class="{active: $route.name === 'Book'}">單本</router-link> 
+          </li>
+          <li class="nav-item">
+            <!-- active 控制當下頁面 -->
+            <router-link to="/book-page" class="nav-link" :class="{active: $route.name === 'BookPage'}">單頁</router-link> 
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">註冊</a>
           </li>
         </ul>
       </div>

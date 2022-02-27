@@ -4,6 +4,11 @@
     <nav class="d-flex justify-content-center mb-3">
       <ul class="pagination justify-content-center mb-0 me-3">
         <li class="page-item">
+          <a class="page-link" href="#">
+            上一話
+          </a>
+        </li>
+        <li class="page-item">
           <a class="page-link" href="#" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
           </a>
@@ -18,6 +23,11 @@
         <li class="page-item">
           <a class="page-link" href="#" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">
+            下一話
           </a>
         </li>
       </ul>
@@ -42,6 +52,11 @@
     <!-- 下部分頁 -->
     <nav class="d-flex justify-content-center mb-3">
       <ul class="pagination justify-content-center me-3 mb-0">
+        <li class="page-item">
+          <a class="page-link" href="#">
+            上一話
+          </a>
+        </li>
         <li class="page-item">
           <a class="page-link" href="#" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
@@ -79,17 +94,29 @@
             <span aria-hidden="true">&raquo;</span>
           </a>
         </li>
+        <li class="page-item">
+          <a class="page-link" href="#">
+            下一話
+          </a>
+        </li>
       </ul>
     </nav>
 
     <!-- 留言： -->
-
+    <section class="container">
+      <CustomerComment></CustomerComment>
+    </section>
   </div>
 </template>
 
 <script>
+import CustomerComment from '@/components/CustomerComment'
+
 export default {
   name: 'BookPage',
+  components:{
+    CustomerComment
+  },
   data () {
     return {
     }

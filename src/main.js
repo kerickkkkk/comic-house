@@ -13,10 +13,13 @@ import SwiperCore, {
   Autoplay, Pagination, Navigation
 } from 'swiper/core'
 
+// 引入 font awesome
+import 'font-awesome/css/font-awesome.min.css' 
 // Import Swiper styles
-import 'swiper/swiper.scss'
-import 'swiper/components/pagination/pagination.min.css'
-import 'swiper/components/navigation/navigation.min.css'
+// 改用 css 引入 部屬到 gh-pages 會有問題
+// import 'swiper/swiper.scss'
+// import 'swiper/components/pagination/pagination.min.css'
+// import 'swiper/components/navigation/navigation.min.css'
 
 // install Swiper modules
 SwiperCore.use([Autoplay, Pagination, Navigation])

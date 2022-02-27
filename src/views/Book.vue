@@ -16,7 +16,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="mb-5">
       <h2>
         <span class="border-bottom border-3 border-primary">目錄</span>
       </h2>
@@ -40,13 +40,18 @@
 
     </section>
     <!-- 留言： -->
-
+    <CustomerComment></CustomerComment>
   </div>
 </template>
 
 <script>
+import CustomerComment from "@/components/CustomerComment.vue"
+
 export default {
   name: 'Book',
+  components:{
+    CustomerComment
+  },
   data () {
     return {
       currentPage:1,
